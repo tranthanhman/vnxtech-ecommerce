@@ -1,0 +1,60 @@
+{
+  "categories": [
+    {
+      "id": "phone",
+      "name": "Điện thoại",
+      "icon": "Phone",
+      "color": "bg-blue-500",
+      "description": "Điện thoại thông minh các thương hiệu nổi tiếng"
+    },
+    {
+      "id": "laptop",
+      "name": "Laptop",
+      "icon": "Laptop",
+      "color": "bg-green-500",
+      "description": "Laptop cho công việc, học tập và giải trí"
+    },
+    {
+      "id": "tablet",
+      "name": "Tablet",
+      "icon": "Tablet",
+      "color": "bg-purple-500",
+      "description": "Máy tính bảng cho mọi nhu cầu sử dụng"
+    },
+    {
+      "id": "accessories",
+      "name": "Phụ kiện",
+      "icon": "Headphones",
+      "color": "bg-orange-500",
+      "description": "Phụ kiện công nghệ đa dạng"
+    },
+    {
+      "id": "watch",
+      "name": "Đồng hồ",
+      "icon": "Watch",
+      "color": "bg-red-500",
+      "description": "Đồng hồ thông minh và truyền thống"
+    },
+    {
+      "id": "camera",
+      "name": "Camera",
+      "icon": "Camera",
+      "color": "bg-indigo-500",
+      "description": "Máy ảnh và thiết bị quay phim"
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming",
+      "icon": "Gamepad2",
+      "color": "bg-pink-500",
+      "description": "Thiết bị gaming và console"
+    },
+    {
+      "id": "tv",
+      "name": "TV",
+      "icon": "Tv",
+      "color": "bg-teal-500",
+      "description": "Smart TV và thiết bị giải trí"
+    }
+  ]
+}

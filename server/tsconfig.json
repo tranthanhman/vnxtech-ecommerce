@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                            // Hỗ trợ async/await và Promise tốt
+    "module": "CommonJS",                          // Dùng CommonJS cho Node.js
+    "rootDir": "./src",                            // Mã nguồn nằm trong thư mục src/
+    "outDir": "./dist",                            // Output sau khi build nằm trong dist/
+    "strict": true,                                // Bật tất cả kiểm tra nghiêm ngặt
+    "esModuleInterop": true,                       // Cho phép import thư viện CommonJS
+    "moduleResolution": "node",                    // Cho phép tìm module giống Node.js
+    "skipLibCheck": true,                          // Bỏ kiểm tra type trong node_modules
+    "forceConsistentCasingInFileNames": true,      // Tránh lỗi tên file viết hoa/thường không đồng nhất
+    "resolveJsonModule": true,                     // Cho phép import file JSON
+    "types": ["node", "express"],                  // Bổ sung types cho Node.js và Express
+    "baseUrl": ".",                                // Cần để khai báo alias path
+    "paths": {
+      "@/*": ["src/*"]                             // Alias @ trỏ vào src
+    }
+  },
+  "include": ["src/**/*.ts"],                      // Biên dịch tất cả file TS trong src/
+  "exclude": ["node_modules", "dist"]              // Bỏ qua thư mục node_modules và dist khi build
+}

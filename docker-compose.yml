@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/var/www/html
+      - /var/www/html/node_modules
+      - /var/www/html/.next
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - server
+    command: npm run dev
+
+  cms:
+    build: ./cms
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./cms:/var/www/html
+      - /var/www/html/node_modules
+      - /var/www/html/dist
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - server
+    command: npm run dev
+
+  server:
+    build: ./server
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./server:/var/www/html
+      - /var/www/html/node_modules
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_REFRESH_SECRET=${JWT_REFRESH_SECRET}
+    depends_on:
+      - db
+    command: npm run dev
+
+  db:
+    image: postgres:alpine3.22
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      POSTGRES_DB: ${POSTGRES_DB:-vnxtech}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
