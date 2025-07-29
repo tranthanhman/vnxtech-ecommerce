@@ -4,6 +4,8 @@ FROM node:20.19-alpine3.21
 WORKDIR /var/www/html
 
 COPY package*.json ./
+COPY prisma ./prisma
+
 RUN npm install
 
 COPY . .
