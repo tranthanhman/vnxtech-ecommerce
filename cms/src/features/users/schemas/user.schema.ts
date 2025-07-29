@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import type { UserStatus, Role } from '../types';
+import type { UserStatus, Role } from '@/types/user.types';
 
 export const userSchema = z.object({
   name: z.string().min(1, 'Tên là bắt buộc'),

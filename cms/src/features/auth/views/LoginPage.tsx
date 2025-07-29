@@ -1,38 +1,52 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useNotification } from "@/hooks/useNotification";
-import {useAuthStore} from "../store";
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { useNotification } from '@/hooks/useNotification'
+import { useAuthStore } from '@/stores/authStore'
+import {Role, UserStatus} from '@/types/user.types'
 
 export default function LoginPage() {
-  const login = useAuthStore((s) => s.login);
-  const navigate = useNavigate();
-  const { notify } = useNotification();
+  const login = useAuthStore((s) => s.login)
+  const navigate = useNavigate()
+  const { notify } = useNotification()
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    if (email.includes("admin")) {
-      login({ name: "Admin", email, avatar: "https://github.com/shadcn.png" });
+    if (email.includes('admin')) {
+      login({
+        id:'1',
+        username: 'Admin',
+        email,
+        avatar: 'https://github.com/shadcn.png',
+        firstName: 'Admin',
+        lastName: 'Admin',
+        phoneNumber: '0909090909',
+        status: UserStatus.ACTIVE,
+        role: Role.ADMIN,
+        password: '123456',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      })
       notify({
-        title: "Đăng nhập thành công",
-        description: "Chào mừng bạn quay trở lại!",
-        type: "success",
-      });
-      navigate("/");
+        title: 'Đăng nhập thành công',
+        description: 'Chào mừng bạn quay trở lại!',
+        type: 'success',
+      })
+      navigate('/')
     } else {
       notify({
-        title: "Đăng nhập thất bại",
-        description: "Email hoặc mật khẩu không đúng.",
-        type: "error",
-      });
+        title: 'Đăng nhập thất bại',
+        description: 'Email hoặc mật khẩu không đúng.',
+        type: 'error',
+      })
     }
-  };
+  }
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
@@ -63,5 +77,5 @@ export default function LoginPage() {
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

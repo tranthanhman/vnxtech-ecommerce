@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { CreateUserInput } from '@/dto/user.dto';
+import { CreateUserDTO } from '../../dto/user.dto';
 import { prisma } from '../../config/prisma';
 import {
   signAccessToken,
@@ -7,10 +7,9 @@ import {
   verifyRefreshToken,
 } from '../../utils/jwt';
 
-export const register = async (input: CreateUserInput) => {
+export const register = async (input: CreateUserDTO) => {
   const hashedPassword = await bcrypt.hash(input.password, 10);
 
-  // Gán role mặc định: customer
   const customerRole = await prisma.role.findFirst({
     where: { name: 'customer' },
   });
@@ -39,7 +38,6 @@ export const login = async (email: string, password: string) => {
   const accessToken = signAccessToken({ userId: user.id });
   const refreshToken = signRefreshToken({ userId: user.id });
 
-  // Tạo 1 phiên đăng nhập mới lưu vào bảng Token
   await prisma.token.create({
     data: {
       userId: user.id,
@@ -70,7 +68,6 @@ export const refreshAccessToken = async (refreshToken: string) => {
 
     const newAccessToken = signAccessToken({ userId: decoded.userId });
 
-    // Optionally: cập nhật lại accessToken mới cho token hiện tại
     await prisma.token.update({
       where: { id: tokenInDb.id },
       data: { accessToken: newAccessToken },

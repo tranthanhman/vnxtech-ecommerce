@@ -6,8 +6,9 @@ import MainLayout from "@/components/layout/main-layout";
 const NotFound = lazy(() => import("@/pages/NotFound"));
 const DashboardPage = lazy(() => import("@/features/dashboard/DashboardPage"));
 const LoginPage = lazy(() => import("@/features/auth/views/LoginPage"));
-const UserListPage = lazy(() => import("@/features/users/views/UserListPage"));
+const UserListPage = lazy(() => import("@/features/users/views/user-list"));
 const ProfilePage = lazy(() => import("@/features/settings/views/ProfilePage"));
+const ProductListPage = lazy(() => import("@/features/products/components/product-list"));
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/users",
+        Component: UserListPage,
+      },
+      {
+        path: "/products",
+        Component: ProductListPage,
+      },
+      {
+        path: "/categories",
         Component: UserListPage,
       },
        {

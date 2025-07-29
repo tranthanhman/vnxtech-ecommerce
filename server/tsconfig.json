@@ -13,7 +13,7 @@
     "types": ["node", "express"],                  // Bổ sung types cho Node.js và Express
     "baseUrl": ".",                                // Cần để khai báo alias path
     "paths": {
-      "@/*": ["src/*"]                             // Alias @ trỏ vào src
+      "@/*": ["./src/*"]                             // Alias @ trỏ vào src
     }
   },
   "include": ["src/**/*.ts"],                      // Biên dịch tất cả file TS trong src/

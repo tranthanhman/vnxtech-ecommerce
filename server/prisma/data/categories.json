@@ -1,0 +1,6 @@
+[
+  { "name": "Men", "slug": "men" },
+  { "name": "Women", "slug": "women" },
+  { "name": "T-Shirts", "slug": "t-shirts", "parentSlug": "men" },
+  { "name": "Jeans", "slug": "jeans", "parentSlug": "men" }
+]

@@ -9,12 +9,12 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
-import { useUserStore } from '../store'
+import { useUserStore } from '@/stores/userStore'
 
 import { userSchema } from '../schemas/user.schema'
 import type { UserFormValues } from '../schemas/user.schema'
 
-import { useForm } from 'react-hook-form'
+import { useForm, type FieldErrors } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import {
   Form,
@@ -31,7 +31,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Role, UserStatus } from '../types'
+import { Role, UserStatus } from '@/types/user.types'
 
 export default function UsersDialogs() {
   const { open, setOpen } = useUserStore()
@@ -53,7 +53,6 @@ export default function UsersDialogs() {
     resolver: zodResolver(userSchema),
     defaultValues: {
       name: 'cc',
-      username: 'cc',
       email: '',
       phoneNumber: '',
       status: null,
@@ -73,7 +72,7 @@ export default function UsersDialogs() {
     console.log('✅ Form data:', data)
   }
 
-  const onError = (errors: any) => {
+  const onError = (errors: FieldErrors<UserFormValues>) => {
     console.log('❌ Validation errors:', errors)
   }
 

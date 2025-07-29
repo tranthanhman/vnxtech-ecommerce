@@ -11,7 +11,8 @@ export const authGuard = (req: Request, res: Response, next: NextFunction) => {
     console.log('token',token);
     const decoded = jwt.verify(token, process.env.JWT_SECRET_ACCESS!);
     console.log("decorded", decoded);
-    req.user = decoded;
+    // Attach user to req, but first extend the type to avoid TS error
+    (req as any).user = decoded;
     next();
   } catch {
     return res.status(403).json({ message: "Token expired or invalid" });
