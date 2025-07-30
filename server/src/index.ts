@@ -19,7 +19,7 @@ const startServer = async () => {
     httpServer.listen(PORT, () => {
       logger.info(
         `📑 Visit the documentation at: http://localhost:${
-          process.env.PORT || 8080
+          process.env.PORT || 8090
         }`
       );
       logger.info("⚙️  Server is running on port: " + process.env.PORT);

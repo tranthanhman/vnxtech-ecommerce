@@ -17,8 +17,6 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const httpServer = createServer(app);
-
 // global middlewares
 app.use(
   cors({
@@ -41,5 +39,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/category', categoryRoutes); 
+
+const httpServer = createServer(app);
 
 export { httpServer };
