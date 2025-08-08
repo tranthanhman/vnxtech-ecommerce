@@ -4,7 +4,9 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import {BottomNavigation} from "@/components/layout/bottom-navigation"
+import { BottomNavigation } from "@/components/layout/bottom-navigation"
+import TanstackProvider from "../components/providers/TanstackProvider"
+import AuthModal from "@/components/AuthModal"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,7 +24,10 @@ export default function RootLayout({
     <html lang="vi">
       <body className={inter.className}>
         <Header />
-        <main>{children}</main>
+        <TanstackProvider>
+          <main>{children}</main>
+          <AuthModal />
+        </TanstackProvider>
         <Footer />
         <BottomNavigation />
       </body>

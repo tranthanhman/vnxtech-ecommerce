@@ -1,5 +1,6 @@
-import { axiosInstance } from '@/lib/axios'
+import { api } from '@/lib/axios'
 import { type User } from '@/types/user.types'
+import type { APIResponse } from '@/types/api.types'
 
 export type ResponseUser = {
   users: User[]
@@ -11,8 +12,8 @@ export type ResponseUser = {
   }
 }
 
-export const getUsers = async (page: number = 1, limit: number = 10): Promise<ResponseUser> => {
-  const response = await axiosInstance.get<ResponseUser>('/users', {
+export const getUsers = async (page: number = 1, limit: number = 10) => {
+  const response = await api.get<APIResponse<ResponseUser>>('/users', {
     params: { page, limit },
   })
 

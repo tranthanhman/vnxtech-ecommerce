@@ -1,28 +1,42 @@
 import { Request, Response } from "express";
 import * as authService from "./auth.service";
-import { ApiResponse } from "../../utils/ApiResponse";
+import { asyncHandler } from "../../utils/asyncHandler";
+import {success} from "@/utils/response";
 
-export const registerUser = async (req: Request, res: Response) => {
-  const { name, email, password } = req.body;
-  const user = await authService.register({ name, email, password });
+export const registerUser = asyncHandler(
+  async (req: Request, res: Response) => {
+    const { name, email, password } = req.body;
+    const user = await authService.register({ name, email, password });
+    return success(res, user, "User registered successfully", 201);
+  }
+);
 
-  res
-    .status(201)
-    .json(new ApiResponse(201, user, "User registered successfully"));
-};
-
-export const loginUser = async (req: Request, res: Response) => {
+export const loginUser = asyncHandler(async (req: Request, res: Response) => {
   const { email, password } = req.body;
-  const tokens = await authService.login(email, password);
+  const result = await authService.login(email, password);
 
-  res.status(200).json(new ApiResponse(200, tokens, "Login successful"));
-};
+  res.cookie("accessToken", result.accessToken, {
+    httpOnly: true,
+    secure: false, // true in production with HTTPS
+    // sameSite: "Strict",
+    maxAge: 15 * 60 * 1000,
+  });
 
-export const refreshToken = async (req: Request, res: Response) => {
-  const { refreshToken } = req.body;
-  const tokens = await authService.refreshAccessToken(refreshToken);
+  res.cookie("refreshToken", result.refreshToken, {
+    httpOnly: true,
+    secure: false,
+    // sameSite: "Strict",
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+  });
 
-  res
-    .status(200)
-    .json(new ApiResponse(200, tokens, "Refresh token successful"));
-};
+
+  return success(res, result.user, "Login successful", 200);
+});
+
+export const refreshToken = asyncHandler(
+  async (req: Request, res: Response) => {
+    const { refreshToken } = req.body;
+    const tokens = await authService.refreshAccessToken(refreshToken);
+    return success(res, tokens, "Refresh token successful", 200);
+  }
+);

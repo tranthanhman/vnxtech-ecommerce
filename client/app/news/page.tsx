@@ -1,5 +1,5 @@
-import { NewsDetailPage } from "@/components/news/news-detail-page"
-
-export default function NewsDetail({ params }: { params: { id: string } }) {
-  return <NewsDetailPage newsId={params.id} />
+export default function NewsDetail() {
+  return (
+    <h1>page news</h1>
+  )
 }

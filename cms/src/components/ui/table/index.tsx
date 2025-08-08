@@ -9,6 +9,7 @@ import type { ColumnDef } from '@tanstack/react-table'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../table'
 import { DataTablePagination } from './data-table-pagination'
 import DataTableToolbar from './data-table-toolbar'
+import { LoaderCircle } from 'lucide-react'
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -17,6 +18,7 @@ interface DataTableProps<TData, TValue> {
   serverSide?: boolean
   pageIndex: number
   pageSize: number
+  loading?: boolean
   onPaginationChange: (pagination: { pageIndex: number; pageSize: number }) => void
 }
 
@@ -28,6 +30,7 @@ export default function DataTable<TData, TValue>({
   pageIndex,
   pageSize,
   onPaginationChange,
+  loading = false,
 }: DataTableProps<TData, TValue>) {
   const table = useReactTable({
     data,
@@ -41,8 +44,7 @@ export default function DataTable<TData, TValue>({
     },
     manualPagination: serverSide,
     onPaginationChange: (updater) => {
-      const next =
-        typeof updater === 'function' ? updater({ pageIndex, pageSize }) : updater
+      const next = typeof updater === 'function' ? updater({ pageIndex, pageSize }) : updater
       onPaginationChange(next)
     },
     getCoreRowModel: getCoreRowModel(),
@@ -69,7 +71,15 @@ export default function DataTable<TData, TValue>({
             ))}
           </TableHeader>
           <TableBody>
-            {table.getRowModel().rows.length ? (
+            {loading ? (
+              <TableRow>
+                <TableCell colSpan={columns.length} className="h-24">
+                  <div className="flex justify-center items-center h-full min-h-[400px]">
+                    <LoaderCircle className="w-4 h-4 animate-spin" />
+                  </div>
+                </TableCell>
+              </TableRow>
+            ) : table.getRowModel().rows.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
                   {row.getVisibleCells().map((cell) => (

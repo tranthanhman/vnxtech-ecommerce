@@ -1,4 +1,10 @@
 [
-  { "name": "Nike", "slug": "nike", "logo": "https://example.com/logos/nike.png" },
-  { "name": "Zara", "slug": "zara", "logo": "https://example.com/logos/zara.png" }
+  { "name": "MSI", "slug": "msi", "logo": "https://example.com/logos/msi.png" },
+  { "name": "ASUS", "slug": "asus", "logo": "https://example.com/logos/asus.png" },
+  { "name": "GIGABYTE", "slug": "gigabyte", "logo": "https://example.com/logos/gigabyte.png" },
+  { "name": "EVGA", "slug": "evga", "logo": "https://example.com/logos/evga.png" },
+  { "name": "Sapphire", "slug": "sapphire", "logo": "https://example.com/logos/sapphire.png" },
+  { "name": "XFX", "slug": "xfx", "logo": "https://example.com/logos/xfx.png" },
+  { "name": "PowerColor", "slug": "powercolor", "logo": "https://example.com/logos/powercolor.png" },
+  { "name": "ZOTAC", "slug": "zotac", "logo": "https://example.com/logos/zotac.png" }
 ]

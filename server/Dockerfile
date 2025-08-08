@@ -3,6 +3,8 @@ FROM node:20.19-alpine3.21
 
 WORKDIR /var/www/html
 
+RUN rm -rf node_modules && rm -rf package-lock.json
+
 COPY package*.json ./
 COPY prisma ./prisma
 

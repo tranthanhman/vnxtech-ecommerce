@@ -1,340 +1,407 @@
 [
   {
-    "name": "Incredible Steel Shoes",
-    "slug": "incredible-steel-shoes",
-    "price": 199.99,
-    "discountPrice": null,
-    "stock": 42,
-    "imageUrl": "https://loremflickr.com/320/240/shoes",
-    "description": "The best shoes for your daily adventures. Durable, stylish, and comfortable.",
-    "specifications": null,
+    "name": "MSI GeForce RTX 5060 Ti",
+    "slug": "msi-geforce-rtx-5060-ti",
+    "sku": "MSI-5060TI",
+    "price": 12500000,
+    "discountPrice": 11900000,
+    "stock": 0,
+    "description": "Card màn hình MSI GeForce RTX 5060 Ti với hiệu năng mạnh mẽ và thiết kế tản nhiệt hiệu quả.",
     "isFeatured": true,
-    "categorySlug": "men",
-    "brandSlug": "nike"
+    "categoryId": 1,
+    "brandId": 1,
+    "variants": [
+      {
+        "sku": "MSI-5060TI-BLK-8G",
+        "name": "Black / 8GB",
+        "price": 12500000,
+        "stock": 20,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/msi-5060-black-1.jpg",
+            "isPrimary": true
+          },
+          {
+            "imageUrl": "https://example.com/images/msi-5060-black-2.jpg",
+            "isPrimary": false
+          }
+        ],
+        "options": [
+          { "name": "Color", "value": "Black" },
+          { "name": "Memory", "value": "8GB" }
+        ]
+      },
+      {
+        "sku": "MSI-5060TI-WHT-16G",
+        "name": "White / 16GB",
+        "price": 13500000,
+        "stock": 15,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/msi-5060-white-1.jpg",
+            "isPrimary": true
+          },
+          {
+            "imageUrl": "https://example.com/images/msi-5060-white-2.jpg",
+            "isPrimary": false
+          }
+        ],
+        "options": [
+          { "name": "Color", "value": "White" },
+          { "name": "Memory", "value": "16GB" }
+        ]
+      }
+    ]
   },
   {
-    "name": "Practical Cotton Shirt",
-    "slug": "practical-cotton-shirt",
-    "price": 39.99,
-    "discountPrice": null,
-    "stock": 60,
-    "imageUrl": "https://loremflickr.com/320/240/shirt",
-    "description": "A practical cotton shirt for all occasions. Breathable and easy to care for.",
-    "specifications": null,
+    "name": "ASUS TUF Gaming RTX 4060",
+    "slug": "asus-tuf-rtx-4060",
+    "sku": "ASUS-TUF-4060",
+    "price": 0,
+    "discountPrice": 0,
+    "stock": 0,
+    "description": "Card đồ họa ASUS dòng TUF với độ bền cao và hiệu suất ổn định.",
     "isFeatured": false,
-    "categorySlug": "men",
-    "brandSlug": "zara"
+    "categoryId": 1,
+    "brandId": 2,
+    "variants": [
+      {
+        "sku": "ASUS-TUF-BLK-8G",
+        "name": "Black / 8GB",
+        "price": 11000000,
+        "stock": 20,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/asus-black-1.jpg",
+            "isPrimary": true
+          }
+        ],
+        "options": [
+          { "name": "Color", "value": "Black" },
+          { "name": "Memory", "value": "8GB" }
+        ]
+      },
+      {
+        "sku": "ASUS-TUF-WHT-8G",
+        "name": "White / 8GB",
+        "price": 11400000,
+        "stock": 10,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/asus-white-1.jpg",
+            "isPrimary": true
+          }
+        ],
+        "options": [
+          { "name": "Color", "value": "White" },
+          { "name": "Memory", "value": "8GB" }
+        ]
+      }
+    ]
   },
   {
-    "name": "Classic Cotton Polo",
-    "slug": "classic-cotton-polo",
-    "price": 34.99,
-    "discountPrice": null,
-    "stock": 55,
-    "imageUrl": "https://loremflickr.com/320/240/polo",
-    "description": "Classic cotton polo for everyday wear.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "men",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Sporty Mesh Shorts",
-    "slug": "sporty-mesh-shorts",
-    "price": 19.99,
-    "discountPrice": null,
-    "stock": 70,
-    "imageUrl": "https://loremflickr.com/320/240/shorts",
-    "description": "Lightweight mesh shorts for sports and leisure.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "men",
-    "brandSlug": "nike"
-  },
-  {
-    "name": "Casual Cotton Shorts",
-    "slug": "casual-cotton-shorts",
-    "price": 24.99,
-    "discountPrice": null,
-    "stock": 38,
-    "imageUrl": "https://loremflickr.com/320/240/shorts",
-    "description": "Casual cotton shorts for comfort and style.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "men",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Elegant Silk Dress",
-    "slug": "elegant-silk-dress",
-    "price": 129.99,
-    "discountPrice": 99.99,
-    "stock": 25,
-    "imageUrl": "https://loremflickr.com/320/240/dress",
-    "description": "An elegant silk dress perfect for special occasions.",
-    "specifications": null,
+    "name": "GIGABYTE GeForce RTX 4070 Eagle",
+    "slug": "gigabyte-rtx-4070-eagle",
+    "sku": "GIGA-4070E",
+    "price": 0,
+    "stock": 0,
+    "description": "Card đồ họa Gigabyte RTX 4070 với thiết kế mát mẻ và mạnh mẽ.",
     "isFeatured": true,
-    "categorySlug": "women",
-    "brandSlug": "zara"
+    "categoryId": 1,
+    "brandId": 3,
+    "variants": [
+      {
+        "sku": "GIGA-4070-BLK",
+        "name": "Black",
+        "price": 15500000,
+        "stock": 12,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/giga-4070-black.jpg",
+            "isPrimary": true
+          }
+        ],
+        "options": [{ "name": "Color", "value": "Black" }]
+      },
+      {
+        "sku": "GIGA-4070-GRN",
+        "name": "Green",
+        "price": 15700000,
+        "stock": 8,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/giga-4070-green.jpg",
+            "isPrimary": true
+          }
+        ],
+        "options": [{ "name": "Color", "value": "Green" }]
+      }
+    ]
   },
   {
-    "name": "Comfortable Running Shoes",
-    "slug": "comfortable-running-shoes",
-    "price": 89.99,
-    "discountPrice": 79.99,
-    "stock": 50,
-    "imageUrl": "https://loremflickr.com/320/240/running-shoes",
-    "description": "Comfortable running shoes for daily workouts.",
-    "specifications": null,
+    "name": "ZOTAC RTX 3060 Twin Edge",
+    "slug": "zotac-rtx-3060",
+    "sku": "ZOTAC-3060",
+    "price": 0,
+    "stock": 0,
+    "description": "Card đồ họa ZOTAC RTX 3060 nhỏ gọn và mạnh mẽ.",
     "isFeatured": false,
-    "categorySlug": "men",
-    "brandSlug": "nike"
+    "categoryId": 1,
+    "brandId": 4,
+    "variants": [
+      {
+        "sku": "ZOTAC-3060-6G",
+        "name": "6GB",
+        "price": 7900000,
+        "stock": 25,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/zotac-6g.jpg",
+            "isPrimary": true
+          }
+        ],
+        "options": [{ "name": "Memory", "value": "6GB" }]
+      },
+      {
+        "sku": "ZOTAC-3060-12G",
+        "name": "12GB",
+        "price": 8800000,
+        "stock": 15,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/zotac-12g.jpg",
+            "isPrimary": true
+          }
+        ],
+        "options": [{ "name": "Memory", "value": "12GB" }]
+      }
+    ]
   },
   {
-    "name": "Trendy Denim Jeans",
-    "slug": "trendy-denim-jeans",
-    "price": 59.99,
-    "discountPrice": null,
+    "name": "PNY RTX 3080 XLR8",
+    "slug": "pny-rtx-3080",
+    "sku": "PNY-3080",
+    "price": 0,
+    "stock": 0,
+    "description": "PNY RTX 3080 hiệu năng cao cho gaming và AI.",
+    "isFeatured": true,
+    "categoryId": 1,
+    "brandId": 5,
+    "variants": [
+      {
+        "sku": "PNY-3080-10G",
+        "name": "10GB",
+        "price": 19500000,
+        "stock": 10,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/pny-10g.jpg",
+            "isPrimary": true
+          }
+        ],
+        "options": [{ "name": "Memory", "value": "10GB" }]
+      },
+      {
+        "sku": "PNY-3080-12G",
+        "name": "12GB",
+        "price": 20800000,
+        "stock": 5,
+        "images": [
+          {
+            "imageUrl": "https://example.com/images/pny-12g.jpg",
+            "isPrimary": true
+          }
+        ],
+        "options": [{ "name": "Memory", "value": "12GB" }]
+      }
+    ]
+  },
+  {
+    "name": "Colorful iGame RTX 4060 Ti",
+    "slug": "colorful-rtx-4060ti",
+    "sku": "CLF-4060TI",
+    "price": 10800000,
+    "discountPrice": 10200000,
     "stock": 40,
-    "imageUrl": "https://loremflickr.com/320/240/jeans",
-    "description": "Trendy denim jeans for a casual look.",
-    "specifications": null,
+    "description": "Card đồ họa Colorful iGame RTX 4060 Ti, RGB đẹp mắt, tản nhiệt hiệu quả.",
     "isFeatured": false,
-    "categorySlug": "jeans",
-    "brandSlug": "zara"
+    "categoryId": 1,
+    "brandId": 1,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/colorful-4060ti-1.jpg",
+        "isPrimary": true
+      },
+      {
+        "imageUrl": "https://example.com/images/colorful-4060ti-2.jpg",
+        "isPrimary": false
+      }
+    ]
   },
   {
-    "name": "Basic White T-Shirt",
-    "slug": "basic-white-t-shirt",
-    "price": 14.99,
+    "name": "MSI RTX 4070 Gaming X Trio",
+    "slug": "msi-rtx-4070-gaming-x",
+    "sku": "MSI-4070-X",
+    "price": 16500000,
     "discountPrice": null,
-    "stock": 100,
-    "imageUrl": "https://loremflickr.com/320/240/tshirt",
-    "description": "A basic white t-shirt for everyday wear.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "t-shirts",
-    "brandSlug": "nike"
-  },
-  {
-    "name": "Slim Fit Jeans",
-    "slug": "slim-fit-jeans",
-    "price": 49.99,
-    "discountPrice": 39.99,
-    "stock": 30,
-    "imageUrl": "https://loremflickr.com/320/240/jeans2",
-    "description": "Slim fit jeans for a modern look.",
-    "specifications": null,
-    "isFeatured": true,
-    "categorySlug": "jeans",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Summer Floral Dress",
-    "slug": "summer-floral-dress",
-    "price": 69.99,
-    "discountPrice": null,
-    "stock": 20,
-    "imageUrl": "https://loremflickr.com/320/240/floral-dress",
-    "description": "A beautiful floral dress for summer days.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "women",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Men's Sports Jacket",
-    "slug": "mens-sports-jacket",
-    "price": 89.99,
-    "discountPrice": 69.99,
     "stock": 15,
-    "imageUrl": "https://loremflickr.com/320/240/jacket",
-    "description": "A stylish sports jacket for men.",
-    "specifications": null,
+    "description": "MSI RTX 4070 với hệ thống tản nhiệt 3 quạt, Gaming X hiệu năng cực tốt.",
     "isFeatured": true,
-    "categorySlug": "men",
-    "brandSlug": "nike"
+    "categoryId": 1,
+    "brandId": 1,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/msi-4070-1.jpg",
+        "isPrimary": true
+      },
+      {
+        "imageUrl": "https://example.com/images/msi-4070-2.jpg",
+        "isPrimary": false
+      }
+    ]
   },
   {
-    "name": "Women's Casual Blouse",
-    "slug": "womens-casual-blouse",
-    "price": 29.99,
-    "discountPrice": null,
-    "stock": 35,
-    "imageUrl": "https://loremflickr.com/320/240/blouse",
-    "description": "A casual blouse for women.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "women",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Men's Graphic T-Shirt",
-    "slug": "mens-graphic-tshirt",
-    "price": 19.99,
-    "discountPrice": null,
-    "stock": 80,
-    "imageUrl": "https://loremflickr.com/320/240/graphic-tshirt",
-    "description": "A cool graphic t-shirt for men.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "t-shirts",
-    "brandSlug": "nike"
-  },
-  {
-    "name": "Women's Skinny Jeans",
-    "slug": "womens-skinny-jeans",
-    "price": 54.99,
-    "discountPrice": 44.99,
-    "stock": 28,
-    "imageUrl": "https://loremflickr.com/320/240/skinny-jeans",
-    "description": "Skinny jeans for women.",
-    "specifications": null,
-    "isFeatured": true,
-    "categorySlug": "jeans",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Men's Cotton Hoodie",
-    "slug": "mens-cotton-hoodie",
-    "price": 49.99,
-    "discountPrice": null,
-    "stock": 45,
-    "imageUrl": "https://loremflickr.com/320/240/hoodie",
-    "description": "A comfortable cotton hoodie for men.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "men",
-    "brandSlug": "nike"
-  },
-  {
-    "name": "Women's Summer Shorts",
-    "slug": "womens-summer-shorts",
-    "price": 24.99,
-    "discountPrice": null,
-    "stock": 32,
-    "imageUrl": "https://loremflickr.com/320/240/womens-shorts",
-    "description": "Light and comfortable shorts for summer.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "women",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Men's Leather Belt",
-    "slug": "mens-leather-belt",
-    "price": 29.99,
-    "discountPrice": null,
-    "stock": 60,
-    "imageUrl": "https://loremflickr.com/320/240/belt",
-    "description": "A classic leather belt for men.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "men",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Women's Knit Sweater",
-    "slug": "womens-knit-sweater",
-    "price": 39.99,
-    "discountPrice": 29.99,
-    "stock": 22,
-    "imageUrl": "https://loremflickr.com/320/240/sweater",
-    "description": "A cozy knit sweater for women.",
-    "specifications": null,
-    "isFeatured": true,
-    "categorySlug": "women",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Men's Training Shorts",
-    "slug": "mens-training-shorts",
-    "price": 22.99,
-    "discountPrice": null,
+    "name": "ASUS Dual RTX 3050",
+    "slug": "asus-dual-rtx-3050",
+    "sku": "ASUS-3050-DUAL",
+    "price": 7900000,
+    "discountPrice": 7600000,
     "stock": 55,
-    "imageUrl": "https://loremflickr.com/320/240/training-shorts",
-    "description": "Training shorts for men.",
-    "specifications": null,
+    "description": "Card đồ họa ASUS Dual RTX 3050 nhỏ gọn, hiệu quả cho gaming 1080p.",
     "isFeatured": false,
-    "categorySlug": "men",
-    "brandSlug": "nike"
+    "categoryId": 1,
+    "brandId": 2,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/asus-3050-1.jpg",
+        "isPrimary": true
+      }
+    ]
   },
   {
-    "name": "Women's Classic T-Shirt",
-    "slug": "womens-classic-tshirt",
-    "price": 17.99,
+    "name": "GIGABYTE RTX 4060 Windforce OC",
+    "slug": "gigabyte-rtx-4060-wfoc",
+    "sku": "GIGA-4060-WF",
+    "price": 10500000,
+    "discountPrice": 9990000,
+    "stock": 32,
+    "description": "Card đồ họa GIGABYTE 4060 với hệ thống quạt Windforce mát mẻ.",
+    "isFeatured": false,
+    "categoryId": 1,
+    "brandId": 3,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/gigabyte-4060-1.jpg",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "name": "ZOTAC GAMING RTX 4060 Twin Edge OC",
+    "slug": "zotac-rtx-4060-oc",
+    "sku": "ZOTAC-4060OC",
+    "price": 10300000,
     "discountPrice": null,
-    "stock": 75,
-    "imageUrl": "https://loremflickr.com/320/240/womens-tshirt",
-    "description": "A classic t-shirt for women.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "t-shirts",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Men's Casual Sneakers",
-    "slug": "mens-casual-sneakers",
-    "price": 59.99,
-    "discountPrice": 49.99,
-    "stock": 35,
-    "imageUrl": "https://loremflickr.com/320/240/sneakers",
-    "description": "Casual sneakers for men.",
-    "specifications": null,
-    "isFeatured": true,
-    "categorySlug": "men",
-    "brandSlug": "nike"
-  },
-  {
-    "name": "Women's Elegant Blazer",
-    "slug": "womens-elegant-blazer",
-    "price": 89.99,
-    "discountPrice": 69.99,
     "stock": 18,
-    "imageUrl": "https://loremflickr.com/320/240/blazer",
-    "description": "An elegant blazer for women.",
-    "specifications": null,
-    "isFeatured": true,
-    "categorySlug": "women",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Men's Basic Shorts",
-    "slug": "mens-basic-shorts",
-    "price": 19.99,
-    "discountPrice": null,
-    "stock": 65,
-    "imageUrl": "https://loremflickr.com/320/240/basic-shorts",
-    "description": "Basic shorts for men.",
-    "specifications": null,
+    "description": "Card ZOTAC RTX 4060 Twin Edge OC - thiết kế nhỏ gọn, hiệu năng cao.",
     "isFeatured": false,
-    "categorySlug": "men",
-    "brandSlug": "nike"
+    "categoryId": 1,
+    "brandId": 4,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/zotac-4060oc-1.jpg",
+        "isPrimary": true
+      }
+    ]
   },
   {
-    "name": "Women's Denim Skirt",
-    "slug": "womens-denim-skirt",
-    "price": 34.99,
-    "discountPrice": null,
-    "stock": 27,
-    "imageUrl": "https://loremflickr.com/320/240/denim-skirt",
-    "description": "A stylish denim skirt for women.",
-    "specifications": null,
-    "isFeatured": false,
-    "categorySlug": "women",
-    "brandSlug": "zara"
-  },
-  {
-    "name": "Men's Classic Jeans",
-    "slug": "mens-classic-jeans",
-    "price": 44.99,
-    "discountPrice": 34.99,
-    "stock": 48,
-    "imageUrl": "https://loremflickr.com/320/240/classic-jeans",
-    "description": "Classic jeans for men.",
-    "specifications": null,
+    "name": "PNY RTX 4070 12GB VERTO",
+    "slug": "pny-rtx-4070-verto",
+    "sku": "PNY-4070-VERTO",
+    "price": 17200000,
+    "discountPrice": 16800000,
+    "stock": 14,
+    "description": "Card đồ họa PNY RTX 4070 phiên bản VERTO tản nhiệt kép.",
     "isFeatured": true,
-    "categorySlug": "jeans",
-    "brandSlug": "nike"
+    "categoryId": 1,
+    "brandId": 5,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/pny-4070-1.jpg",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "name": "ASUS ROG Strix RTX 4080 OC Edition",
+    "slug": "asus-rog-rtx-4080",
+    "sku": "ASUS-4080-ROG",
+    "price": 31900000,
+    "discountPrice": 29900000,
+    "stock": 8,
+    "description": "ASUS ROG Strix RTX 4080 OC - flagship dành cho game thủ chuyên nghiệp.",
+    "isFeatured": true,
+    "categoryId": 1,
+    "brandId": 2,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/asus-4080-1.jpg",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "name": "Colorful RTX 3050 NB DUO",
+    "slug": "colorful-rtx-3050-nb",
+    "sku": "CLF-3050-NB",
+    "price": 7400000,
+    "discountPrice": 6990000,
+    "stock": 38,
+    "description": "Card Colorful RTX 3050 NB DUO nhỏ gọn, giá tốt cho PC phổ thông.",
+    "isFeatured": false,
+    "categoryId": 1,
+    "brandId": 1,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/colorful-3050-1.jpg",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "name": "ZOTAC RTX 4090 AMP Extreme AIRO",
+    "slug": "zotac-rtx-4090-amp",
+    "sku": "ZOTAC-4090-AMP",
+    "price": 46900000,
+    "discountPrice": null,
+    "stock": 4,
+    "description": "Card đồ họa cao cấp nhất ZOTAC RTX 4090 AMP Extreme - sức mạnh AI.",
+    "isFeatured": true,
+    "categoryId": 1,
+    "brandId": 4,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/zotac-4090-1.jpg",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "name": "MSI RTX 4080 SUPRIM X",
+    "slug": "msi-rtx-4080-supx",
+    "sku": "MSI-4080-SUPX",
+    "price": 32500000,
+    "discountPrice": 31500000,
+    "stock": 6,
+    "description": "MSI RTX 4080 SUPRIM X hiệu năng vượt trội, tản nhiệt cực tốt.",
+    "isFeatured": true,
+    "categoryId": 1,
+    "brandId": 1,
+    "images": [
+      {
+        "imageUrl": "https://example.com/images/msi-4080-1.jpg",
+        "isPrimary": true
+      }
+    ]
   }
 ]

@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import Image from "next/image"
 
 const orderHistory = [
   {
@@ -228,7 +229,7 @@ export function AccountPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {wishlistItems.map((item) => (
                         <div key={item.id} className="flex space-x-4 p-4 border rounded-lg">
-                          <img
+                          <Image
                             src={item.image || "/placeholder.svg"}
                             alt={item.name}
                             className="w-20 h-20 object-cover rounded-lg"

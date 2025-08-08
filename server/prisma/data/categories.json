@@ -1,6 +1,12 @@
 [
-  { "name": "Men", "slug": "men" },
-  { "name": "Women", "slug": "women" },
-  { "name": "T-Shirts", "slug": "t-shirts", "parentSlug": "men" },
-  { "name": "Jeans", "slug": "jeans", "parentSlug": "men" }
+  { "name": "Graphics Cards", "slug": "graphics-cards" },
+  { "name": "Processors", "slug": "processors" },
+  { "name": "Motherboards", "slug": "motherboards" },
+  { "name": "Memory", "slug": "memory" },
+  { "name": "Storage", "slug": "storage" },
+  { "name": "Power Supplies", "slug": "power-supplies" },
+  { "name": "Cases", "slug": "cases" },
+  { "name": "Cooling", "slug": "cooling" },
+  { "name": "NVIDIA", "slug": "nvidia", "parentSlug": "graphics-cards" },
+  { "name": "AMD", "slug": "amd", "parentSlug": "graphics-cards" }
 ]

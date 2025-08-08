@@ -6,3 +6,10 @@ export type AuthState = {
   login: (user: User) => void
   logout: () => void
 }
+
+
+export type LoginResponse = {
+  accessToken: string
+  refreshToken: string
+  user: User
+}

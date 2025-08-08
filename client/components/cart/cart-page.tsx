@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useActionState, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react"
@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
+import { useAuthStore } from "@/stores/authStore"
 
 const initialCartItems = [
   {
@@ -33,6 +34,7 @@ const initialCartItems = [
 ]
 
 export function CartPage() {
+  const auth = useAuthStore()
   const [cartItems, setCartItems] = useState(initialCartItems)
 
   const formatPrice = (price: number) => {
@@ -72,6 +74,9 @@ export function CartPage() {
       </div>
     )
   }
+
+  console.log('auth',auth);
+  
 
   return (
     <div className="container mx-auto px-4 py-8">

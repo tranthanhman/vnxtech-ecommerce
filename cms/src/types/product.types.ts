@@ -18,6 +18,7 @@ export interface Product {
   id: number
   name: string
   slug: string
+  sku: string
   price: number
   discountPrice: number | null
   stock: number
@@ -30,4 +31,5 @@ export interface Product {
   createdAt: string
   category: Category
   brand: Brand
+  gallery: number[]
 }

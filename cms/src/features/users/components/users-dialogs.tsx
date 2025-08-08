@@ -31,17 +31,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Role, UserStatus } from '@/types/user.types'
+import { RoleEnum, UserStatusEnum } from '@/types/user.types'
 
 export default function UsersDialogs() {
   const { open, setOpen } = useUserStore()
 
-  const statusOptions = Object.entries(UserStatus).map(([key, value]) => ({
+  const statusOptions = Object.entries(UserStatusEnum).map(([key, value]) => ({
     label: key,
     value: value,
   }))
 
-  const rolesOptions = Object.entries(Role).map(([key, value]) => ({
+  const rolesOptions = Object.entries(RoleEnum).map(([key, value]) => ({
     label: key,
     value: value,
   }))

@@ -1,5 +1,6 @@
-import { axiosInstance } from '@/lib/axios'
+import { api } from '@/lib/axios'
 import { type Product } from '@/types/product.types'
+import type { APIResponse } from '@/types/api.types'
 
 export type ResponseProduct = {
   products: Product[]
@@ -11,8 +12,8 @@ export type ResponseProduct = {
   }
 }
 
-export const getProducts = async (page: number = 1, limit: number = 10): Promise<ResponseProduct> => {
-  const response = await axiosInstance.get<ResponseProduct>('/products', {
+export const getProducts = async (page: number = 1, limit: number = 10) => {
+  const response = await api.get<APIResponse<ResponseProduct>>('/products', {
     params: { page, limit },
   })
 

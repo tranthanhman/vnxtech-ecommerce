@@ -1,8 +1,7 @@
 import { CreateUserDTO } from "../../dto/user.dto";
 import { prisma } from "../../config/prisma";
 import bcrypt from "bcrypt";
-import { ApiResponse } from "../../utils/ApiResponse";
-import {ApiError} from "../../utils/ApiError";
+import { ApiError } from "../../utils/ApiError";
 import { StatusCodes } from "http-status-codes";
 
 /**
@@ -21,6 +20,9 @@ export const getUsers = async (page: number, limit: number) => {
   const users = await prisma.user.findMany({
     skip,
     take: currentLimit,
+    include: {
+      role: true,
+    },
   });
 
   const totalPages = Math.ceil(totalUsers / currentLimit);
@@ -73,5 +75,13 @@ export const createUser = async (input: CreateUserDTO) => {
     },
   });
 
-  return new ApiResponse(201, [], "User created successfully");
+  return;
+};
+
+export const getUserById = async (id: number) => {
+  const res = prisma.user.findFirst({
+    where: { id },
+  });
+  
+  return res;
 };

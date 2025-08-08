@@ -59,8 +59,8 @@ export const menuGroups: MenuGroup[] = [
         icon: Checklist,
       },
       {
-        title: 'Apps',
-        url: '/apps',
+        title: 'Media',
+        url: '/media',
         icon: Packages,
       },
       {

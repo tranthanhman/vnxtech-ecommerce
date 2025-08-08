@@ -4,11 +4,13 @@ import ProtectedRoute from "./ProtectedRoute";
 import MainLayout from "@/components/layout/main-layout";
 
 const NotFound = lazy(() => import("@/pages/NotFound"));
-const DashboardPage = lazy(() => import("@/features/dashboard/DashboardPage"));
-const LoginPage = lazy(() => import("@/features/auth/views/LoginPage"));
+const DashboardPage = lazy(() => import("@/features/dashboard"));
+const LoginPage = lazy(() => import("@/features/auth/login"));
 const UserListPage = lazy(() => import("@/features/users/views/user-list"));
 const ProfilePage = lazy(() => import("@/features/settings/views/ProfilePage"));
 const ProductListPage = lazy(() => import("@/features/products/components/product-list"));
+const ProductDetailPage = lazy(() => import("@/features/products/components/product-detail"));
+const MediaPage = lazy(() => import("@/features/media"));
 
 const router = createBrowserRouter([
   {
@@ -33,11 +35,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/products",
-        Component: ProductListPage,
+        children:[
+          {
+            index:true,
+            Component: ProductListPage,
+          },
+          {
+            path: "/products/edit/:id",
+            Component: ProductDetailPage,
+          },
+          {
+            path: "/products/create",
+            Component: ProductDetailPage,
+          }
+        ]
       },
       {
         path: "/categories",
         Component: UserListPage,
+      },
+      {
+        path: "/media",
+        Component: MediaPage,
       },
        {
         path: "/settings",
@@ -46,10 +65,6 @@ const router = createBrowserRouter([
             index:true,
             Component: ProfilePage,
           },
-          {
-            index:true,
-            Component: ProfilePage,
-          }
         ]
       },
     ],
